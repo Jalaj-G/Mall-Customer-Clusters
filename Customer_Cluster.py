@@ -128,3 +128,12 @@ plt.ylabel('Spending Score (1-100)')
 plt.legend()
 plt.show()
 
+# In[11]:
+#Comparing performance of Kmeans clustering and Hierarchial clustering model
+
+from sklearn.metrics import silhouette_samples, silhouette_score
+
+silhouette_kmeans =silhouette_score(X,y_kmeans)
+print(silhouette_kmeans)
+silhouette_hc=silhouette_score(X,y_hc)
+print(silhouette_hc)
